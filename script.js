@@ -1,3 +1,17 @@
+// Preloader Handler
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    setTimeout(() => {
+        if (preloader) {
+            preloader.classList.add('loaded');
+            // Allow interaction after fade
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800);
+        }
+    }, 1500); // Give users a moment to see the brand animation
+});
+
 // Mobile Navigation Toggle
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
