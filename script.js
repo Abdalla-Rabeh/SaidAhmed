@@ -143,45 +143,7 @@ document.querySelectorAll('.fade-in-element, .stat-number').forEach(el => {
     observer.observe(el);
 });
 
-// Cloudinary Configuration
-const cloudName = "dsc4t5btg";
-
-// Explicit list of videos provided by the user
-const portfolioVideos = [
-    { public_id: "كهرا_وايت_1_isy8ua", title: "مشروع وايت 1", desc: "مونتاج دعائي مبتكر" },
-    { public_id: "توازن_4_af__1_lglvbr", title: "توازن 4", desc: "سلسلة توازن الإبداعية" },
-    { public_id: "مشاريعي/ريلز/Another_step_forward_This_is_my_second_modification_and_I_can_already_feel_the_improvement._Th_adnjti", title: "تطور العمل الإبداعي", desc: "التعديل الثاني وتحسن ملحوظ في جودة المونتاج" },
-    { public_id: "final_حفل_جامعة_المعرفة_j4mtem", title: "جامعة المعرفة", desc: "تغطية حفل تخرج بأسلوب سينمائي" },
-    { public_id: "Luxury_Real_Estate_2_sz7lx0", title: "عقارات فاخرة", desc: "عرض العقارات بأسلوب المونتاج العقاري" },
-    { public_id: "يوم_العلم_السعودي_1_kiqc9o", title: "يوم العلم السعودي", desc: "عمل وطني بلمسات سينمائية" },
-    { public_id: "يوم_العلم_م_2_qnoypr", title: "يوم العلم", desc: "احتفالية يوم العلم بأسلوب مونتاج مميز" },
-    { public_id: "12_vid_ex_sfeuoe", title: "مشروع ريلز 12", desc: "مونتاج احترافي بأسلوب عصري" },
-    { public_id: "14_vid._ex_v2vgmf", title: "مشروع ريلز 14", desc: "تنسيق لوني وحركي متقدم" },
-    { public_id: "كهربا_وايت.aep_f1_sbocnz", title: "مشروع وايت Ae", desc: "مؤثرات بصرية متقدمة After Effects" },
-    { public_id: "17_vid.af_phvr6s", title: "مشروع 17", desc: "مونتاج سينمائي بمؤثرات بصرية" },
-    { public_id: "16_vid._af_fi94vs", title: "مشروع 16", desc: "إبداع في الانتقالات البصرية" },
-    { public_id: "18_vid._af_nl5mts", title: "مشروع 18", desc: "إخراج فني للفيديو القصير" },
-    { public_id: "10_vid_f_folx87", title: "مشروع 10", desc: "لمسات إبداعية في المونتاج" },
-    { public_id: "15_vid_f_ex_xzd56z", title: "مشروع 15", desc: "تصحيح ألوان وإخراج احترافي" },
-    { public_id: "final_كهربا_ywpbdo", title: "مشروع كهربا", desc: "عمل إبداعي رياضي" },
-    { public_id: "Another_step_forward_This_is_my_second_modification_and_I_can_already_feel_the_improvement._Th_nqblng", title: "رحلة الإبداع", desc: "خطوات نحو الاحترافية في تحرير الفيديو" },
-    { public_id: "videoediting_viralreels_q9d1j1", title: "Viral Reels", desc: "مونتاج مخصص للانتشار على السوشيال ميديا" },
-    { public_id: "V_3_abxoel", title: "مشروع V3", desc: "مونتاج سريع وجذاب" },
-    { public_id: "v1_f1_ltbbji", title: "مشروع V1", desc: "دقة عالية في اختيار اللقطات" },
-    { public_id: "Toyota_f1_qm5tac", title: "إعلان تويوتا", desc: "مونتاج إعلاني احترافي للسيارات" },
-    { public_id: "v2_f_1_ukanyr", title: "مشروع V2", desc: "توازن بين الصوت والصورة" },
-    { public_id: "dr_manal_ex_2_dw6mzi", title: "د. منال", desc: "فيديو تعريفي بأسلوب راقي" },
-    { public_id: "final_doctor_anas_qcfttj", title: "د. أنس", desc: "إخراج احترافي للمحتوى الطبي" },
-    { public_id: "final_QATER_1_lvlor8", title: "مشروع قطر", desc: "مونتاج لفعاليات مميزة" },
-    { public_id: "get_xnoi8r", title: "مشروع Get", desc: "مونتاج حركي سريع" },
-    { public_id: "my_reel_zain_b6pqxa", title: "ريلز زين", desc: "عمل إبداعي لبراند زين" },
-    { public_id: "RANGE_ROVER_1_rnouyn", title: "رينج روفر", desc: "فخامة السيارات بلمسات المونتاج" },
-    { public_id: "my_reel_1_upbihv", title: "إبداع شخصي 1", desc: "تجربة بصرية فريدة" },
-    { public_id: "final_skoda_bqtt5z", title: "إعلان سكودا", desc: "مونتاج إعلاني متكامل" },
-    { public_id: "Welcome_back_️_viralreels_videoediting_pjkozs", title: "Welcome Back", desc: "عودة قوية بمحتوى بصري مذهل" },
-    { public_id: "توازن_1_qdl8bo", title: "توازن 1", desc: "انطلاقة سلسلة توازن" }
-];
-
+// Configuration is now in videos-config.js
 // Pagination Configuration
 let currentPage = 1;
 const itemsPerPage = 8;
@@ -234,40 +196,59 @@ function renderVideos(videos) {
     const grid = document.getElementById('cloudinary-portfolio-grid');
     if (!grid) return;
 
-    grid.innerHTML = ''; // Clear existing content
+    grid.innerHTML = '';
 
-    videos.forEach((video) => {
-        const publicId = video.public_id;
-        const videoUrl = `https://res.cloudinary.com/${cloudName}/video/upload/${publicId}.mp4`;
-        const thumbnailUrl = `https://res.cloudinary.com/${cloudName}/video/upload/${publicId}.jpg`;
-
-        const wrapper = document.createElement('div');
-        wrapper.className = 'video-wrapper fade-in-element';
-        wrapper.setAttribute('data-id', publicId);
-
-        wrapper.innerHTML = `
-            <video 
-                preload="metadata" 
-                poster="${thumbnailUrl}" 
-                loop 
-                muted 
-                playsinline 
-                class="cloudinary-video">
-                <source data-src="${videoUrl}" type="video/mp4">
-            </video>
-            <div class="video-info-overlay">
-                <h3>${video.title}</h3>
-                <p>${video.desc}</p>
-            </div>
-            <div class="play-overlay">
-                <i class="fas fa-play"></i>
-            </div>
+    // Add skeletons
+    for (let i = 0; i < videos.length; i++) {
+        const skeleton = document.createElement('div');
+        skeleton.className = 'video-skeleton';
+        skeleton.innerHTML = `
+            <div class="skeleton-video"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-sub"></div>
         `;
+        grid.appendChild(skeleton);
+    }
 
-        wrapper.addEventListener('click', () => openVideoModal(video));
-        grid.appendChild(wrapper);
-        videoInteractionObserver.observe(wrapper);
-    });
+    setTimeout(() => {
+        grid.innerHTML = ''; // Start real render
+        videos.forEach((video) => {
+            const publicId = video.public_id;
+            const videoUrl = `https://res.cloudinary.com/${cloudName}/video/upload/${publicId}.mp4`;
+            const thumbnailUrl = `https://res.cloudinary.com/${cloudName}/video/upload/${publicId}.jpg`;
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'video-wrapper fade-in-element';
+            wrapper.setAttribute('data-id', publicId);
+
+            wrapper.innerHTML = `
+                <div class="video-container" dir="ltr">
+                    <video 
+                        preload="metadata" 
+                        poster="${thumbnailUrl}" 
+                        loop 
+                        muted 
+                        playsinline 
+                        class="cloudinary-video">
+                        <source data-src="${videoUrl}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-interaction">
+                     <div class="video-info-overlay">
+                        <h3>${video.title}</h3>
+                        <p>${video.desc}</p>
+                    </div>
+                    <div class="play-indicator">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            `;
+
+            wrapper.addEventListener('click', () => openVideoModal(video));
+            grid.appendChild(wrapper);
+            videoInteractionObserver.observe(wrapper);
+        });
+    }, 800); // Small delay to show skeletons professionally
 }
 
 /**
@@ -278,8 +259,12 @@ function openVideoModal(videoData) {
     const modalVideo = document.getElementById('modalVideo');
     const modalTitle = document.getElementById('modalTitle');
     const modalDesc = document.getElementById('modalDesc');
-    
+
     if (!modal || !modalVideo) return;
+
+    // Pause all background videos
+    document.querySelectorAll('.video-wrapper.playing video').forEach(v => v.pause());
+    document.querySelectorAll('.video-wrapper.playing').forEach(w => w.classList.remove('playing'));
 
     const publicId = videoData.public_id;
     const videoUrl = `https://res.cloudinary.com/${cloudName}/video/upload/${publicId}.mp4`;
@@ -289,6 +274,7 @@ function openVideoModal(videoData) {
     modalVideo.load();
     modalTitle.innerText = videoData.title;
     modalDesc.innerText = videoData.desc;
+
     currentModalVideo = videoData; // Set for sharing
 
     // Show modal
@@ -306,12 +292,12 @@ function openVideoModal(videoData) {
 function closeVideoModal() {
     const modal = document.getElementById('videoModal');
     const modalVideo = document.getElementById('modalVideo');
-    
+
     if (!modal || !modalVideo) return;
 
     modal.classList.remove('active');
     document.body.classList.remove('modal-open');
-    
+
     // Stop video and clear src to prevent background loading
     modalVideo.pause();
     modalVideo.querySelector('source').src = '';
@@ -329,10 +315,10 @@ function showSuccessToast(message) {
         toast.innerHTML = '<i class="fas fa-check-circle"></i> <span class="toast-msg"></span>';
         document.body.appendChild(toast);
     }
-    
+
     toast.querySelector('.toast-msg').innerText = message;
     toast.classList.add('active');
-    
+
     setTimeout(() => {
         toast.classList.remove('active');
     }, 3000);
@@ -371,11 +357,14 @@ function initSocialProof() {
     const toast = document.createElement('div');
     toast.className = 'social-proof-toast';
     toast.innerHTML = `
-        <div class="toast-icon"><i class="fas fa-chart-line"></i></div>
-        <div class="toast-content">
-            <strong id="toastTitle">إنجاز جديد</strong>
-            <span id="toastText">سعيد حمل مشروعاً جديداً!</span>
+        <div class="toast-icon">
+            <i class="fas fa-rocket"></i>
         </div>
+        <div class="toast-content">
+            <strong id="toastTitle" class="toast-title">إنجاز جديد</strong>
+            <span id="toastText" class="toast-msg">سعيد حمل مشروعاً جديداً!</span>
+        </div>
+        <div class="toast-progress-bar"></div>
     `;
     document.body.appendChild(toast);
 
@@ -384,10 +373,10 @@ function initSocialProof() {
         const item = socialProofData[index];
         document.getElementById('toastTitle').innerText = item.title;
         document.getElementById('toastText').innerText = item.text;
-        
+
         toast.classList.add('active');
         setTimeout(() => toast.classList.remove('active'), 6000);
-        
+
         index = (index + 1) % socialProofData.length;
     }, 25000); // Popup every 25 seconds
 }
@@ -399,7 +388,7 @@ function initSocialProof() {
 function handleDeeplinking() {
     const urlParams = new URLSearchParams(window.location.search);
     const videoId = urlParams.get('v');
-    
+
     if (videoId) {
         const video = portfolioVideos.find(v => v.public_id === videoId);
         if (video) {
@@ -526,14 +515,185 @@ function toggleVideoPlay(wrapper) {
     }
 }
 
+// Global State
+let isMuted = true;
+let reelModeActive = true;
+
+/**
+ * Global Sound Control
+ */
+function toggleGlobalMute() {
+    isMuted = !isMuted;
+    const muteBtn = document.getElementById('globalMute');
+
+    if (muteBtn) {
+        muteBtn.classList.toggle('muted', isMuted);
+        const icon = muteBtn.querySelector('i');
+        icon.className = isMuted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+    }
+
+    // Apply to all active videos
+    document.querySelectorAll('video').forEach(video => {
+        video.muted = isMuted;
+    });
+
+    showSuccessToast(isMuted ? "تم كتم الصوت" : "تم تشغيل الصوت");
+}
+
+/**
+ * Reel Mode (TikTok-style) Logic
+ */
+function enterReelMode() {
+    const overlay = document.getElementById('reelModeOverlay');
+    const container = document.getElementById('reelContainer');
+    if (!overlay || !container) return;
+
+    // Clear and Render Reels
+    container.innerHTML = '';
+    portfolioVideos.forEach((video, index) => {
+        const publicId = video.public_id;
+        const videoUrl = `https://res.cloudinary.com/${cloudName}/video/upload/${publicId}.mp4`;
+
+        const reelItem = document.createElement('div');
+        reelItem.className = 'reel-item';
+        reelItem.innerHTML = `
+            <video class="reel-video" loop playsinline muted="${isMuted}">
+                <source data-src="${videoUrl}" type="video/mp4">
+            </video>
+            <div class="reel-meta">
+                <h3>${video.title}</h3>
+                <p>${video.desc}</p>
+            </div>
+            <div class="reel-sidebar">
+                <div class="sidebar-action" onclick="shareOnWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>مشاركة</span>
+                </div>
+                <div class="sidebar-action like-btn" onclick="toggleReelLike(this)">
+                    <i class="fas fa-heart"></i>
+                    <span class="like-count">إعجاب</span>
+                </div>
+            </div>
+        `;
+        container.appendChild(reelItem);
+    });
+
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    reelModeActive = true;
+
+    // Show Sound Toggle only in Reel Mode
+    const muteBtn = document.getElementById('globalMute');
+    if (muteBtn) muteBtn.classList.add('active');
+
+    // Initial setup for first video
+    setTimeout(() => {
+        const firstVideo = container.querySelector('video');
+        if (firstVideo) {
+            const src = firstVideo.querySelector('source').dataset.src;
+            firstVideo.querySelector('source').src = src;
+            firstVideo.load();
+            firstVideo.muted = isMuted;
+            firstVideo.play();
+        }
+    }, 300);
+
+    // Handle scroll to play/pause (snap interaction)
+    container.onscroll = () => {
+        const items = container.querySelectorAll('.reel-item');
+        items.forEach(item => {
+            const video = item.querySelector('video');
+            const rect = item.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+                if (video.paused) {
+                    if (!video.querySelector('source').src) {
+                        video.querySelector('source').src = video.querySelector('source').dataset.src;
+                        video.load();
+                    }
+                    video.muted = isMuted;
+                    video.play();
+                }
+            } else {
+                video.pause();
+            }
+        });
+    };
+}
+
+function exitReelMode() {
+    const overlay = document.getElementById('reelModeOverlay');
+    if (!overlay) return;
+
+    // Stop all reel videos
+    overlay.querySelectorAll('video').forEach(v => v.pause());
+
+    const muteBtn = document.getElementById('globalMute');
+    if (muteBtn) muteBtn.classList.remove('active');
+
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    reelModeActive = false;
+}
+
+/**
+ * Enhanced Like Functionality
+ */
+function toggleReelLike(el) {
+    el.classList.toggle('liked');
+    const icon = el.querySelector('i');
+    const span = el.querySelector('span');
+
+    if (el.classList.contains('liked')) {
+        icon.className = 'fas fa-heart';
+        icon.style.color = '#ff4757';
+        icon.style.transform = 'scale(1.3)';
+        span.innerText = "تم الإعجاب";
+        showSuccessToast("شكراً لمتابعتك! ❤️");
+        setTimeout(() => {
+            icon.style.transform = 'scale(1)';
+        }, 300);
+    } else {
+        icon.className = 'fas fa-heart';
+        icon.style.color = '';
+        span.innerText = "إعجاب";
+    }
+}
+
+/**
+ * SEO: Inject Dynamic VideoObject Schema
+ */
+function injectVideoSchema() {
+    const schemaArray = portfolioVideos.map(video => ({
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": video.title,
+        "description": video.desc,
+        "thumbnailUrl": `https://res.cloudinary.com/${cloudName}/video/upload/${video.public_id}.jpg`,
+        "uploadDate": "2024-01-01T08:00:00+08:00",
+        "contentUrl": `https://res.cloudinary.com/${cloudName}/video/upload/${video.public_id}.mp4`
+    }));
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaArray);
+    document.head.appendChild(script);
+}
+
 // Start sequence
 document.addEventListener('DOMContentLoaded', () => {
     initializePortfolio();
     initSocialProof();
     handleDeeplinking(); // Check for shared video links
+    injectVideoSchema(); // SEO boost
 });
 
-// Testimonials Carousel Logic (Existing)
+// Update the DOM to correctly close modal with sound state
+const originalCloseModal = closeVideoModal;
+closeVideoModal = function () {
+    if (typeof originalCloseModal === 'function') originalCloseModal();
+};
+
+// Testimonials Carousel Logic (Restored)
 const track = document.querySelector('.testimonials-track');
 const dotsContainer = document.querySelector('.carousel-dots');
 const slides = track ? track.querySelectorAll('.testimonial-card') : [];
@@ -570,7 +730,7 @@ if (track && slides.length > 0) {
     }, 8000);
 }
 
-// WhatsApp Form (Existing)
+// WhatsApp Form (Restored)
 const whatsappForm = document.getElementById('whatsappForm');
 if (whatsappForm) {
     whatsappForm.addEventListener('submit', function (e) {
@@ -585,7 +745,7 @@ if (whatsappForm) {
     });
 }
 
-// Scroll to Top Funcionality
+// Scroll to Top Funcionality (Restored)
 const scrollTopBtn = document.getElementById('scrollTop');
 
 if (scrollTopBtn) {

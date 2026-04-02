@@ -58,6 +58,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
+    <script src="videos-config.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
@@ -166,6 +167,11 @@
                         <span>أعمالي المميزة</span>
                         <i class="fas fa-play-circle"></i>
                     </a>
+                    <a href="reels.html" class="btn-creative btn-outline-v2"
+                        style="background: #000; color: #fff; border-color: #000;">
+                        <i class="fab fa-tiktok"></i>
+                        <span>وضع الريلز (TikTok)</span>
+                    </a>
                     <a href="#contact" class="btn-creative btn-outline-v2">دعنا نتحدث</a>
                 </div>
             </div>
@@ -259,24 +265,78 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title fade-in-element">معرض أعمالي</h2>
-            <p class="section-subtitle fade-in-element">مجموعة من أعمالي في مونتاج الفيديو والريلز</p>
+            <div class="section-badge fade-in-element">معرض أعمالي المميزة</div>
+            <h2 class="section-title fade-in-element">إبداعات بصرية رائدة</h2>
+            <p class="section-subtitle fade-in-element">تصفح مجموعة مختارة من أفضل أعمالي في مونتاج الريلز والفيديوهات
+                الاحترافية</p>
 
             <!-- Portfolio Grid -->
             <div id="cloudinary-portfolio-grid" class="portfolio-grid">
                 <!-- Videos will be injected here via JavaScript -->
-                <div class="portfolio-loader">
-                    <i class="fas fa-circle-notch fa-spin"></i>
-                    <span>جاري تحميل الإبداع...</span>
-                </div>
             </div>
-            
+
             <!-- View All Portfolio Button -->
             <div class="view-all-container">
                 <a href="portfolio.html" class="btn-creative btn-primary-v2">
-                    <span>عرض كافة الأعمال</span>
+                    <span>عرض كافة الأعمال (32+)</span>
                     <i class="fas fa-arrow-left"></i>
                 </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing" style="display: none;">
+        <div class="container">
+            <h2 class="section-title fade-in-element">باقات استثمار الإبداع</h2>
+            <p class="section-subtitle fade-in-element">اختر الباقة المناسبة لمشروعك وابدأ رحلة النجاح اليوم</p>
+
+            <div class="pricing-grid">
+                <!-- Basic -->
+                <div class="pricing-card fade-in-element">
+                    <h3>باقة البداية</h3>
+                    <div class="price">500<span> ج.م/للريل</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> مونتاج ريلز احترافي</li>
+                        <li><i class="fas fa-check"></i> تصحيح ألوان أساسي</li>
+                        <li><i class="fas fa-check"></i> إضافة ترجمة (Subtitles)</li>
+                        <li><i class="fas fa-check"></i> تعديل واحد مجاني</li>
+                    </ul>
+                    <a href="https://wa.me/201158746769?text=أريد طلب باقة البداية" class="btn btn-primary"
+                        style="width: 100%;">اطلب الآن</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card popular fade-in-element">
+                    <div class="popular-badge">الأكثر طلباً</div>
+                    <h3>باقة المحترفين</h3>
+                    <div class="price">1200<span> ج.م/للريل</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> مونتاج سينمائي متقدم</li>
+                        <li><i class="fas fa-check"></i> تعديل ألوان وتردد صوتي</li>
+                        <li><i class="fas fa-check"></i> جرافيكس ومؤثرات بصرية</li>
+                        <li><i class="fas fa-check"></i> تسليم سريع خلال 24 ساعة</li>
+                        <li><i class="fas fa-check"></i> تعديلات غير محدودة</li>
+                    </ul>
+                    <a href="https://wa.me/201158746769?text=أريد طلب باقة المحترفين" class="btn btn-primary"
+                        style="width: 100%; border: none;">اطلب الآن</a>
+                </div>
+
+                <!-- Elite -->
+                <div class="pricing-card fade-in-element">
+                    <h3>باقة النخبة</h3>
+                    <div class="price">3000<span> ج.م/باقة إبداعية</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 5 فيديوهات ريلز شهرياً</li>
+                        <li><i class="fas fa-check"></i> استراتيجية محتوى متكاملة</li>
+                        <li><i class="fas fa-check"></i> أولوية في التنفيذ</li>
+                        <li><i class="fas fa-check"></i> دعم فني مخصص 24/7</li>
+                    </ul>
+                    <a href="https://wa.me/201158746769?text=أريد طلب باقة النخبة" class="btn btn-primary"
+                        style="width: 100%;">استشرني الآن</a>
+                </div>
             </div>
         </div>
     </section>
@@ -601,6 +661,29 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Global Sound Toggle -->
+    <button id="globalMute" class="global-mute-btn" onclick="toggleGlobalMute()" title="كتم/تشغيل الصوت">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201158746769" class="floating-whatsapp" target="_blank" aria-label="Contact on WhatsApp">
+        <div class="wa-pulse"></div>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Reel Mode (TikTok Style) Overlay -->
+    <div id="reelModeOverlay" class="reel-mode-overlay">
+        <button class="close-reel-mode" onclick="exitReelMode()"><i class="fas fa-times"></i></button>
+        <div id="reelContainer" class="reel-container">
+            <!-- Reels will be injected here -->
+        </div>
+        <div class="reel-instructions">
+            <i class="fas fa-arrows-alt-v"></i>
+            <span>اسحب للأعلى للتنقل</span>
+        </div>
+    </div>
+
     <!-- Video Lightbox Modal -->
     <div id="videoModal" class="video-modal">
         <div class="modal-overlay" onclick="closeVideoModal()"></div>
@@ -613,22 +696,33 @@
                     <source src="" type="video/mp4">
                 </video>
             </div>
-            <div class="modal-info">
-                <h2 id="modalTitle">اسم الفيديو</h2>
-                <p id="modalDesc">وصف الفيديو هنا...</p>
-            </div>
-            <div class="modal-actions">
-                <button class="share-btn" onclick="copyVideoLink()">
-                    <i class="fas fa-link"></i>
-                    <span>نسخ الرابط</span>
-                </button>
-                <button class="share-btn whatsapp" onclick="shareOnWhatsApp()">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>واتساب</span>
-                </button>
+            <div class="modal-body-details">
+                <div class="modal-info">
+                    <h2 id="modalTitle">اسم الفيديو</h2>
+                    <p id="modalDesc">وصف الفيديو هنا...</p>
+
+                    <a href="https://wa.me/201158746769?text=أريد طلب فيديو احترافي مشابه لهذا العمل"
+                        class="btn btn-primary modal-cta">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>اطلب فيديو احترافي مثله الآن</span>
+                    </a>
+                </div>
+                <div class="modal-actions">
+                    <button class="share-btn" onclick="copyVideoLink()">
+                        <i class="fas fa-link"></i>
+                        <span>نسخ الرابط</span>
+                    </button>
+                    <button class="share-btn whatsapp" onclick="shareOnWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>واتساب</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Social Proof Toast -->
+    <div id="socialProof" class="social-proof-toast"></div>
 
     <script src="script.js"></script>
 </body>

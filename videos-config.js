@@ -1,0 +1,36 @@
+// Shared Configuration: Professional Portfolio Videos
+const cloudName = "dsc4t5btg";
+
+const portfolioVideos = [
+    { public_id: "كهرا_وايت_1_isy8ua", title: "مشروع وايت 1", desc: "مونتاج دعائي مبتكر" },
+    { public_id: "توازن_4_af__1_lglvbr", title: "توازن 4", desc: "سلسلة توازن الإبداعية" },
+    { public_id: "مشاريعي/ريلز/Another_step_forward_This_is_my_second_modification_and_I_can_already_feel_the_improvement._Th_adnjti", title: "تطور العمل الإبداعي", desc: "التعديل الثاني وتحسن ملحوظ" },
+    { public_id: "final_حفل_جامعة_المعرفة_j4mtem", title: "حفل جامعة المعرفة", desc: "تغطية سينمائية لتخرج" },
+    { public_id: "Luxury_Real_Estate_2_sz7lx0", title: "عقارات فاخرة", desc: "عرض العقارات بأسلوب احترافي" },
+    { public_id: "يوم_العلم_السعودي_1_kiqc9o", title: "يوم العلم السعودي", desc: "عمل وطني سينمائي" },
+    { public_id: "يوم_العلم_م_2_qnoypr", title: "يوم العلم", desc: "احتفالية يوم العلم بالريلز" },
+    { public_id: "12_vid_ex_sfeuoe", title: "مشروع ريلز 12", desc: "مونتاج عصري سريع" },
+    { public_id: "14_vid._ex_v2vgmf", title: "مشروع ريلز 14", desc: "تنسيق لوني متقدم" },
+    { public_id: "كهربا_وايت.aep_f1_sbocnz", title: "مشروع وايت Ae", desc: "مؤثرات After Effects" },
+    { public_id: "17_vid.af_phvr6s", title: "مشروع 17", desc: "مونتاج بمؤثرات صوتية" },
+    { public_id: "16_vid._af_fi94vs", title: "مشروع 16", desc: "إبداع في الانتقالات" },
+    { public_id: "18_vid._af_nl5mts", title: "مشروع 18", desc: "إخراج فيديو قصير" },
+    { public_id: "10_vid_f_folx87", title: "مشروع 10", desc: "لمسات إبداعية" },
+    { public_id: "15_vid_f_ex_xzd56z", title: "مشروع 15", desc: "تصحيح ألوان وإخراج" },
+    { public_id: "final_كهربا_ywpbdo", title: "مشروع كهربا", desc: "عمل رياضي إبداعي" },
+    { public_id: "Another_step_forward_This_is_my_second_modification_and_I_can_already_feel_the_improvement._Th_nqblng", title: "رحلة الإبداع", desc: "خطوات التميز في المونتاج" },
+    { public_id: "videoediting_viralreels_q9d1j1", title: "Viral Reels", desc: "مونتاج للانتشار السريع" },
+    { public_id: "V_3_abxoel", title: "مشروع V3", desc: "مونتاج خاطف للأنظار" },
+    { public_id: "v1_f1_ltbbji", title: "مشروع V1", desc: "دقة اختيار اللقطات" },
+    { public_id: "Toyota_f1_qm5tac", title: "إعلان تويوتا", desc: "مونتاج إعلاني احترافي" },
+    { public_id: "v2_f_1_ukanyr", title: "مشروع V2", desc: "توازن صوتي بصري" },
+    { public_id: "dr_manal_ex_2_dw6mzi", title: "د. منال", desc: "فيديو تعريفي راقي" },
+    { public_id: "final_doctor_anas_qcfttj", title: "د. أنس", desc: "محتوى طبي احترافي" },
+    { public_id: "final_QATER_1_lvlor8", title: "مشروع قطر", desc: "تغطية فعاليات" },
+    { public_id: "get_xnoi8r", title: "مشروع Get", desc: "مونتاج حركي" },
+    { public_id: "my_reel_zain_b6pqxa", title: "ريلز زين", desc: "إبداع لبراند زين" },
+    { public_id: "RANGE_ROVER_1_rnouyn", title: "رينج روفر", desc: "فخامة رينج روفر" },
+    { public_id: "my_reel_1_upbihv", title: "إبداع شخصي 1", desc: "تجربة بصرية فريدة" },
+    { public_id: "final_skoda_bqtt5z", title: "إعلان سكودا", desc: "مونتاج إعلاني متكامل" },
+    { public_id: "توازن_1_qdl8bo", title: "توازن 1", desc: "انطلاقة توازن" }
+];

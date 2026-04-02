@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الريلز الإبداعي | سعيد أحمد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reels.css">
+</head>
+<body class="reels-page">
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-home-btn" title="العودة للرئيسية">
+        <i class="fas fa-chevron-right"></i>
+        <span>الرئيسية</span>
+    </a>
+
+    <!-- Global Mute Control -->
+    <button id="reelsMute" class="reels-mute-toggle" title="كتم/تشغيل الصوت">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <!-- Main Reels Container -->
+    <div id="reelsContainer" class="reels-scroller">
+        <!-- Videos will be injected here -->
+    </div>
+
+    <!-- Social Proof Toast (Shared) -->
+    <div id="socialProof" class="social-proof-toast"></div>
+
+    <!-- Scripts -->
+    <script src="videos-config.js"></script>
+    <script src="reels.js"></script>
+</body>
+</html>
