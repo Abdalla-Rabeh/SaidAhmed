@@ -10,8 +10,11 @@
     <meta name="description"
         content="تصفح معرض أعمال سعيد أحمد بالكامل. مونتاج احترافي للريلز والفيديوهات بأسلوب سينمائي جذاب.">
 
-    <!-- Favicon -->
+    <!-- Favicon & PWA -->
     <link rel="icon" type="image/x-icon" href="me.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
@@ -128,8 +131,8 @@
                     <div class="footer-contact">
                         <h4>تواصل معي</h4>
                         <div class="contact-info-footer">
-                            <p><i class="fas fa-envelope"></i> saidahmedbnabas@gmail.com</p>
-                            <p><i class="fas fa-phone"></i> +20 115 874 6769</p>
+                            <p dir="ltr"><i class="fas fa-envelope"></i> saidahmedbnabas@gmail.com</p>
+                            <p dir="ltr"><i class="fas fa-phone"></i> +20 115 874 6769</p>
                             <p><i class="fas fa-map-marker-alt"></i> مصر</p>
                         </div>
                     </div>
@@ -191,6 +194,16 @@
             <div class="modal-info">
                 <h2 id="modalTitle">اسم الفيديو</h2>
                 <p id="modalDesc">وصف الفيديو هنا...</p>
+            </div>
+            <div class="modal-actions">
+                <button class="share-btn" onclick="copyVideoLink()">
+                    <i class="fas fa-link"></i>
+                    <span>نسخ الرابط</span>
+                </button>
+                <button class="share-btn whatsapp" onclick="shareOnWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>واتساب</span>
+                </button>
             </div>
         </div>
     </div>

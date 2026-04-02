@@ -184,7 +184,8 @@ const portfolioVideos = [
 
 // Pagination Configuration
 let currentPage = 1;
-const itemsPerPage = 12; // Showing 8 reels per page for a balanced grid
+const itemsPerPage = 8;
+let currentModalVideo = null; // Track current video for sharing
 
 /**
  * Initialize Gallery with hardcoded videos and pagination logic
@@ -288,6 +289,7 @@ function openVideoModal(videoData) {
     modalVideo.load();
     modalTitle.innerText = videoData.title;
     modalDesc.innerText = videoData.desc;
+    currentModalVideo = videoData; // Set for sharing
 
     // Show modal
     modal.classList.add('active');
@@ -313,6 +315,100 @@ function closeVideoModal() {
     // Stop video and clear src to prevent background loading
     modalVideo.pause();
     modalVideo.querySelector('source').src = '';
+    currentModalVideo = null;
+}
+
+/**
+ * Custom Toast Notifications
+ */
+function showSuccessToast(message) {
+    let toast = document.querySelector('.toast-success');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'toast-success';
+        toast.innerHTML = '<i class="fas fa-check-circle"></i> <span class="toast-msg"></span>';
+        document.body.appendChild(toast);
+    }
+    
+    toast.querySelector('.toast-msg').innerText = message;
+    toast.classList.add('active');
+    
+    setTimeout(() => {
+        toast.classList.remove('active');
+    }, 3000);
+}
+
+/**
+ * Viral Sharing Functions
+ */
+function copyVideoLink() {
+    if (!currentModalVideo) return;
+    const shareUrl = `${window.location.origin}${window.location.pathname}?v=${currentModalVideo.public_id}`;
+    navigator.clipboard.writeText(shareUrl).then(() => {
+        showSuccessToast("تم نسخ رابط الفيديو بنجاح! 🎉");
+    });
+}
+
+function shareOnWhatsApp() {
+    if (!currentModalVideo) return;
+    const shareUrl = `${window.location.origin}${window.location.pathname}?v=${currentModalVideo.public_id}`;
+    const text = `شوف المونتاج ده لشغل سعيد أحمد: ${currentModalVideo.title}\n${shareUrl}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+/**
+ * Social Proof System
+ */
+const socialProofData = [
+    { title: "إنجاز جديد 🎬", text: "سعيد أحمد أكمل مشروع مونتاج ريلز لبراند عالمي!" },
+    { title: "انتشار واسع 🔥", text: "مشروع 'رينج روفر' تخطى حاجز الـ 100 ألف مشاهدة." },
+    { title: "ثقة العملاء ⭐", text: "تقييم 5 نجوم من عميل في المملكة العربية السعودية." },
+    { title: "عمل وطني 🇸🇦", text: "فيديو يوم العلم السعودي يحظى بإعجاب الآلاف." }
+];
+
+function initSocialProof() {
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = 'social-proof-toast';
+    toast.innerHTML = `
+        <div class="toast-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="toast-content">
+            <strong id="toastTitle">إنجاز جديد</strong>
+            <span id="toastText">سعيد حمل مشروعاً جديداً!</span>
+        </div>
+    `;
+    document.body.appendChild(toast);
+
+    let index = 0;
+    setInterval(() => {
+        const item = socialProofData[index];
+        document.getElementById('toastTitle').innerText = item.title;
+        document.getElementById('toastText').innerText = item.text;
+        
+        toast.classList.add('active');
+        setTimeout(() => toast.classList.remove('active'), 6000);
+        
+        index = (index + 1) % socialProofData.length;
+    }, 25000); // Popup every 25 seconds
+}
+
+/**
+ * Deep Linking Support
+ * Handles opening a specific video if the 'v' parameter is in the URL
+ */
+function handleDeeplinking() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const videoId = urlParams.get('v');
+    
+    if (videoId) {
+        const video = portfolioVideos.find(v => v.public_id === videoId);
+        if (video) {
+            // Small delay to ensure everything is ready
+            setTimeout(() => {
+                openVideoModal(video);
+            }, 500);
+        }
+    }
 }
 
 // Close modal on ESC key
@@ -431,7 +527,11 @@ function toggleVideoPlay(wrapper) {
 }
 
 // Start sequence
-document.addEventListener('DOMContentLoaded', initializePortfolio);
+document.addEventListener('DOMContentLoaded', () => {
+    initializePortfolio();
+    initSocialProof();
+    handleDeeplinking(); // Check for shared video links
+});
 
 // Testimonials Carousel Logic (Existing)
 const track = document.querySelector('.testimonials-track');

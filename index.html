@@ -45,9 +45,11 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://said-ahmed.vercel.app/">
 
-    <!-- Favicon -->
+    <!-- Favicon & PWA -->
     <link rel="icon" type="image/x-icon" href="me.jpeg">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,19 +65,40 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "سعيد أحمد",
-      "jobTitle": "محترف مونتاج الريلز والفيديوهات",
-      "description": "خبير مونتاج الريلز والفيديوهات الاحترافية",
-      "url": "https://said-ahmed.vercel.app/",
-      "email": "saidahmedbnabas@gmail.com",
-      "telephone": "+20-115-874-6769",
-      "image": "https://said-ahmed.vercel.app/me.jpeg",
-      "knowsAbout": ["Video Editing", "Reels Editing", "Adobe Premiere Pro", "After Effects", "Social Media Content"],
-      "sameAs": [
-        "https://www.facebook.com/share/17gJvswNf9/",
-        "https://www.instagram.com/saidahmed.vfx/",
-        "https://www.linkedin.com/in/said-ahmed-sayed-4624632a8/"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://said-ahmed.vercel.app/#person",
+          "name": "سعيد أحمد",
+          "jobTitle": "محترف مونتاج الريلز والفيديوهات",
+          "description": "خبير مونتاج الريلز والفيديوهات الاحترافية المتخصص في Reel Editing و Video Production.",
+          "url": "https://said-ahmed.vercel.app/",
+          "email": "saidahmedbnabas@gmail.com",
+          "telephone": "+201158746769",
+          "image": "https://said-ahmed.vercel.app/me.jpeg",
+          "sameAs": [
+            "https://www.facebook.com/share/17gJvswNf9/",
+            "https://www.instagram.com/saidahmed.vfx/",
+            "https://www.linkedin.com/in/said-ahmed-sayed-4624632a8/"
+          ]
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Video Editing",
+          "provider": { "@id": "https://said-ahmed.vercel.app/#person" },
+          "description": "خدمات مونتاج احترافية للريلز، فيديوهات يوتيوب، والمحتوى الإعلاني بأسلوب سينمائي.",
+          "areaServed": "Worldwide"
+        },
+        {
+          "@type": "Review",
+          "itemReviewed": {
+            "@type": "Service",
+            "name": "Professional Video Editing"
+          },
+          "author": { "@type": "Person", "name": "أحمد خالد" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "سبيع في التسليم وملتزم بالمواعيد. الريلز اللي عملها لي حققت انتشار واسع وجذبت عملاء جدد."
+        }
       ]
     }
     </script>
@@ -447,7 +470,7 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>الهاتف</h4>
-                            <p><a href="tel:+201158746769" itemprop="telephone">+20 115 874 6769</a></p>
+                            <p dir="ltr"><a href="tel:+201158746769" itemprop="telephone">+20 115 874 6769</a></p>
                         </div>
                     </div>
 
@@ -531,8 +554,8 @@
                     <div class="footer-contact">
                         <h4>تواصل معي</h4>
                         <div class="contact-info-footer">
-                            <p><i class="fas fa-envelope"></i> saidahmedbnabas@gmail.com</p>
-                            <p><i class="fas fa-phone"></i> +20 115 874 6769</p>
+                            <p dir="ltr"><i class="fas fa-envelope"></i> saidahmedbnabas@gmail.com</p>
+                            <p dir="ltr"><i class="fas fa-phone"></i> +20 115 874 6769</p>
                             <p><i class="fas fa-map-marker-alt"></i> مصر</p>
                         </div>
                     </div>
@@ -593,6 +616,16 @@
             <div class="modal-info">
                 <h2 id="modalTitle">اسم الفيديو</h2>
                 <p id="modalDesc">وصف الفيديو هنا...</p>
+            </div>
+            <div class="modal-actions">
+                <button class="share-btn" onclick="copyVideoLink()">
+                    <i class="fas fa-link"></i>
+                    <span>نسخ الرابط</span>
+                </button>
+                <button class="share-btn whatsapp" onclick="shareOnWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>واتساب</span>
+                </button>
             </div>
         </div>
     </div>

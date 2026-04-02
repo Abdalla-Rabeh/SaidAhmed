@@ -1,0 +1,21 @@
+{
+  "name": "سعيد أحمد - خبير مونتاج",
+  "short_name": "سعيد أحمد",
+  "description": "خبير مونتاج الفيديو والريلز الاحترافية",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "me.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "me.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
