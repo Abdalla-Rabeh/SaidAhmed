@@ -176,6 +176,25 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- Video Lightbox Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-overlay" onclick="closeVideoModal()"></div>
+        <div class="modal-inner">
+            <button class="close-modal" aria-label="إغلاق" onclick="closeVideoModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-video-container">
+                <video id="modalVideo" controls playsinline autoplay>
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle">اسم الفيديو</h2>
+                <p id="modalDesc">وصف الفيديو هنا...</p>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

@@ -2299,3 +2299,131 @@ textarea:focus {
         font-size: 0.9rem;
     }
 }
+
+/* Video Modal Styling */
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+}
+
+.modal-inner {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    background: #111;
+    border-radius: 30px;
+    overflow: hidden;
+    transform: translateY(30px) scale(0.9);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 10001;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-modal.active .modal-inner {
+    transform: translateY(0) scale(1);
+}
+
+.modal-video-container {
+    width: 100%;
+    height: 400px;
+    aspect-ratio: 9/16;
+    background: #000;
+}
+
+.modal-video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modal-info {
+    padding: 2rem;
+    color: #fff;
+    text-align: right;
+    background: linear-gradient(to bottom, #111, #000);
+}
+
+.modal-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-info p {
+    font-size: 1rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+/* Modal Body Lock */
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .modal-inner {
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .modal-info {
+        padding: 1.5rem;
+    }
+
+    .modal-info h2 {
+        font-size: 1.25rem;
+    }
+}

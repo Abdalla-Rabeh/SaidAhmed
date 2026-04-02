@@ -148,18 +148,24 @@ const cloudName = "dsc4t5btg";
 
 // Explicit list of videos provided by the user
 const portfolioVideos = [
+    { public_id: "كهرا_وايت_1_isy8ua", title: "مشروع وايت 1", desc: "مونتاج دعائي مبتكر" },
+    { public_id: "توازن_4_af__1_lglvbr", title: "توازن 4", desc: "سلسلة توازن الإبداعية" },
     { public_id: "مشاريعي/ريلز/Another_step_forward_This_is_my_second_modification_and_I_can_already_feel_the_improvement._Th_adnjti", title: "تطور العمل الإبداعي", desc: "التعديل الثاني وتحسن ملحوظ في جودة المونتاج" },
+    { public_id: "final_حفل_جامعة_المعرفة_j4mtem", title: "جامعة المعرفة", desc: "تغطية حفل تخرج بأسلوب سينمائي" },
+    { public_id: "Luxury_Real_Estate_2_sz7lx0", title: "عقارات فاخرة", desc: "عرض العقارات بأسلوب المونتاج العقاري" },
+    { public_id: "يوم_العلم_السعودي_1_kiqc9o", title: "يوم العلم السعودي", desc: "عمل وطني بلمسات سينمائية" },
+    { public_id: "يوم_العلم_م_2_qnoypr", title: "يوم العلم", desc: "احتفالية يوم العلم بأسلوب مونتاج مميز" },
     { public_id: "12_vid_ex_sfeuoe", title: "مشروع ريلز 12", desc: "مونتاج احترافي بأسلوب عصري" },
     { public_id: "14_vid._ex_v2vgmf", title: "مشروع ريلز 14", desc: "تنسيق لوني وحركي متقدم" },
+    { public_id: "كهربا_وايت.aep_f1_sbocnz", title: "مشروع وايت Ae", desc: "مؤثرات بصرية متقدمة After Effects" },
     { public_id: "17_vid.af_phvr6s", title: "مشروع 17", desc: "مونتاج سينمائي بمؤثرات بصرية" },
     { public_id: "16_vid._af_fi94vs", title: "مشروع 16", desc: "إبداع في الانتقالات البصرية" },
     { public_id: "18_vid._af_nl5mts", title: "مشروع 18", desc: "إخراج فني للفيديو القصير" },
     { public_id: "10_vid_f_folx87", title: "مشروع 10", desc: "لمسات إبداعية في المونتاج" },
     { public_id: "15_vid_f_ex_xzd56z", title: "مشروع 15", desc: "تصحيح ألوان وإخراج احترافي" },
-    { public_id: "يوم_العلم_م_2_qnoypr", title: "يوم العلم", desc: "احتفالية يوم العلم بأسلوب مونتاج مميز" },
+    { public_id: "final_كهربا_ywpbdo", title: "مشروع كهربا", desc: "عمل إبداعي رياضي" },
     { public_id: "Another_step_forward_This_is_my_second_modification_and_I_can_already_feel_the_improvement._Th_nqblng", title: "رحلة الإبداع", desc: "خطوات نحو الاحترافية في تحرير الفيديو" },
     { public_id: "videoediting_viralreels_q9d1j1", title: "Viral Reels", desc: "مونتاج مخصص للانتشار على السوشيال ميديا" },
-    { public_id: "يوم_العلم_السعودي_1_kiqc9o", title: "يوم العلم السعودي", desc: "عمل وطني بلمسات سينمائية" },
     { public_id: "V_3_abxoel", title: "مشروع V3", desc: "مونتاج سريع وجذاب" },
     { public_id: "v1_f1_ltbbji", title: "مشروع V1", desc: "دقة عالية في اختيار اللقطات" },
     { public_id: "Toyota_f1_qm5tac", title: "إعلان تويوتا", desc: "مونتاج إعلاني احترافي للسيارات" },
@@ -172,13 +178,7 @@ const portfolioVideos = [
     { public_id: "RANGE_ROVER_1_rnouyn", title: "رينج روفر", desc: "فخامة السيارات بلمسات المونتاج" },
     { public_id: "my_reel_1_upbihv", title: "إبداع شخصي 1", desc: "تجربة بصرية فريدة" },
     { public_id: "final_skoda_bqtt5z", title: "إعلان سكودا", desc: "مونتاج إعلاني متكامل" },
-    { public_id: "final_حفل_جامعة_المعرفة_j4mtem", title: "جامعة المعرفة", desc: "تغطية حفل تخرج بأسلوب سينمائي" },
-    { public_id: "Luxury_Real_Estate_2_sz7lx0", title: "عقارات فاخرة", desc: "عرض العقارات بأسلوب المونتاج العقاري" },
-    { public_id: "final_كهربا_ywpbdo", title: "مشروع كهربا", desc: "عمل إبداعي رياضي" },
     { public_id: "Welcome_back_️_viralreels_videoediting_pjkozs", title: "Welcome Back", desc: "عودة قوية بمحتوى بصري مذهل" },
-    { public_id: "كهرا_وايت_1_isy8ua", title: "مشروع وايت 1", desc: "مونتاج دعائي مبتكر" },
-    { public_id: "توازن_4_af__1_lglvbr", title: "توازن 4", desc: "سلسلة توازن الإبداعية" },
-    { public_id: "كهربا_وايت.aep_f1_sbocnz", title: "مشروع وايت Ae", desc: "مؤثرات بصرية متقدمة After Effects" },
     { public_id: "توازن_1_qdl8bo", title: "توازن 1", desc: "انطلاقة سلسلة توازن" }
 ];
 
@@ -263,11 +263,64 @@ function renderVideos(videos) {
             </div>
         `;
 
-        wrapper.addEventListener('click', () => toggleVideoPlay(wrapper));
+        wrapper.addEventListener('click', () => openVideoModal(video));
         grid.appendChild(wrapper);
         videoInteractionObserver.observe(wrapper);
     });
 }
+
+/**
+ * Open Video Modal with metadata
+ */
+function openVideoModal(videoData) {
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    
+    if (!modal || !modalVideo) return;
+
+    const publicId = videoData.public_id;
+    const videoUrl = `https://res.cloudinary.com/${cloudName}/video/upload/${publicId}.mp4`;
+
+    // Set content
+    modalVideo.querySelector('source').src = videoUrl;
+    modalVideo.load();
+    modalTitle.innerText = videoData.title;
+    modalDesc.innerText = videoData.desc;
+
+    // Show modal
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+
+    // Attempt to play with sound
+    modalVideo.muted = false;
+    modalVideo.play().catch(err => console.log("Modal play blocked:", err));
+}
+
+/**
+ * Close Video Modal
+ */
+function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    
+    if (!modal || !modalVideo) return;
+
+    modal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    
+    // Stop video and clear src to prevent background loading
+    modalVideo.pause();
+    modalVideo.querySelector('source').src = '';
+}
+
+// Close modal on ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeVideoModal();
+    }
+});
 
 /**
  * Renders the numeric pagination controls
